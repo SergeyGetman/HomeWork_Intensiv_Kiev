@@ -1,6 +1,5 @@
 
 
-
 const makeObjectDeepCopy = (object) => {
     if (Array.isArray(object) === true) return "it's not a object"
     let clone = {};
@@ -21,15 +20,16 @@ const makeObjectDeepCopy = (object) => {
 
 
 
-const testArray = (array) => {
-    return array.some((elem) => {
-        if (typeof elem != "number") {
-            throw new Error("Misstake")
-        }
-    })
-}
+
 
 const selectFromInterval = (arr, rangeOne, rangeTwo) => {
+    const testArray = (array) => {
+        return array.some((elem) => {
+            if (typeof elem != "number") {
+                throw new Error("Misstake")
+            }
+        })
+    }
     testArray(arr)
     if (typeof rangeOne !== 'number' || typeof rangeTwo !== 'number') throw new Error("It's not a number")
     let newArray = []
@@ -44,13 +44,23 @@ const selectFromInterval = (arr, rangeOne, rangeTwo) => {
 
 
 
-
-const isIterableCheck = object => {
-    if (object != null && typeof object[Symbol.iterator] === 'function')
-        throw new Error("Misstaces")
+const myIterable = {
+    from: 1,
+    to: 4
+}
+const myIterable2 = {
+    from: "aaa",
+    to: 4
 }
 
+
 myIterable[Symbol.iterator] = function (object) {
+
+    const isIterableCheck = object => {
+        if (object != null && typeof object[Symbol.iterator] === 'function')
+            throw new Error("Misstaces")
+    }
+    
     isIterableCheck(object)
     let first = this.from;
     let lasnNumm = this.to;
