@@ -65,7 +65,7 @@ selectFromInterval(array2,-13,-5)
 
 
 
-// task 3 //
+// task 3 
 
 
 const myIterable = {from : 1, to: 4}
