@@ -87,7 +87,7 @@ myIterable[Symbol.iterator] = function (object) {
 
     return {
         next() {
-            if (current <= lasnNumm) {
+            if (first <= lasnNumm) {
                 return {
                     done: false,
                     value: first++
