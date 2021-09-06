@@ -1,17 +1,4 @@
-// task one //
 
-
-let obj = {
-    name: "Sergo",
-    fullName: "Eval Sergo",
-    age: 32,
-    sex: "man",
-    size: {
-        height: 150,
-        width: 155
-    }
-}
-let arr = [1, 2, 3, 4, 5]
 
 
 const makeObjectDeepCopy = (object) => {
@@ -27,16 +14,11 @@ const makeObjectDeepCopy = (object) => {
     }
     return clone;
 }
-makeObjectDeepCopy(obj)
 
 
 
 
-// task 2 //
 
-let array = [1, 3, 5]
-let array2 = [-2, -15, 0, 4]
-let array3 = ['aaa']
 
 
 const testArray = (array) => {
@@ -59,21 +41,9 @@ const selectFromInterval = (arr, rangeOne, rangeTwo) => {
     return finishArr.sort();
 }
 
-selectFromInterval(array2, -13, -5)
 
 
 
-// task 3 
-
-
-const myIterable = {
-    from: 1,
-    to: 4
-}
-const myIterable2 = {
-    from: "aaa",
-    to: 4
-}
 
 const isIterableCheck = object => {
     if (object != null && typeof object[Symbol.iterator] === 'function')
