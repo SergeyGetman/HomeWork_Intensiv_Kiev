@@ -16,13 +16,8 @@ const makeObjectDeepCopy = (object) => {
 
 
 
-
-
-
-
-
-
 const selectFromInterval = (arr, rangeOne, rangeTwo) => {
+    
     const testArray = (array) => {
         return array.some((elem) => {
             if (typeof elem != "number") {
@@ -33,7 +28,15 @@ const selectFromInterval = (arr, rangeOne, rangeTwo) => {
     testArray(arr)
     if (typeof rangeOne !== 'number' || typeof rangeTwo !== 'number') throw new Error("It's not a number")
     let newArray = []
-    for (let i = rangeOne; i > rangeTwo; i--) {
+    let min, max;
+    if(rangeOne > rangeTwo) max = rangeOne
+    else if(rangeOne < 0) min = rangeOne;
+    if(rangeTwo < rangeOne) min = rangeTwo
+    else if(rangeTwo < 0) max = rangeTwo;
+    min
+    max
+    
+    for (let i = min; i <= max; i++) {
         newArray.push(i)
     }
     let finishArr = newArray.filter(elemInFilter => arr.some(elemInSome => elemInFilter == elemInSome));
@@ -48,10 +51,7 @@ const myIterable = {
     from: 1,
     to: 4
 }
-const myIterable2 = {
-    from: "aaa",
-    to: 4
-}
+
 
 
 myIterable[Symbol.iterator] = function (object) {
