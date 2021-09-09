@@ -1,16 +1,21 @@
 
 
- Array.prototype.myFilter = function(callBack) {
+
+
+ Array.prototype.myFilter = function(callBack, params) {
     let newArray = [];
     for (let i = 0; i < this.length; i++) {
-     let result = callBack(this[i], i, this);
-       if (result) {
+      params = callBack(this[i], i, this);
+       if (params) {
         newArray.push(this[i]);
        }
    }
    return newArray;
 }
 const myFilter =  arr.myFilter((elem)  => elem > 5)
+
+
+
 
 function createDebouncedFunction(callback, delay) {
 
