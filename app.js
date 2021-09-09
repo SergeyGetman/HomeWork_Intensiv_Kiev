@@ -1,23 +1,23 @@
 
 
 
+Array.prototype.myFilter = function(callback, thisAgr) {   
 
- Array.prototype.myFilter = function(callBack, params) {
-    let newArray = [];
-    for (let i = 0; i < this.length; i++) {
-      params = callBack(this[i], i, this);
-       if (params) {
-        newArray.push(this[i]);
-       }
-   }
-   return newArray;
-}
-const myFilter =  arr.myFilter((elem)  => elem > 5)
+    return this.reduce(function(accum, elem, index, array){
+        if(callback(thisAgr, elem, index, array )){
+            accum.push(elem);
+            
+        }
+        return accum;
+    },[])
+  }
 
-
+  const myFilter = arr.myFilter((elem) => elem > 5)
 
 
-function createDebouncedFunction(callback, delay) {
+
+
+  function createDebouncedFunction(callback, delay) {
 
     let timerId = null;
 
