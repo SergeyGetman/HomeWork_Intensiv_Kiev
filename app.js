@@ -1,21 +1,22 @@
 
 
-function concatStrings(str, separator){
-  separator = "";
-  let res = "";  
-    const newFunc = function(input){
-      if(!input === separator) return res;
-      if(typeof input !== "string") return res;   
-      res += input;
-      return newFunc;
+
+function concatStrings(string,separator) {
+  let resultStr = string;
+
+  if (typeof(separator) !== "string") {
+    separator = "";
+  }
+  function newFunc(str) {
+    if (typeof(str) !== "string") {
+      return resultStr;
     }
-      
-    return newFunc(str)
+    resultStr = resultStr + separator + str;
+    return newFunc;
+  }
+
+  return newFunc;
 }
-
-
-
-
 
 class Calculator {
 
@@ -27,6 +28,8 @@ class Calculator {
       this.two = two;
       this.logDiv = this.logDiv.bind(this)
       this.logMul = this.logMul.bind(this)
+      this.logSum = this.logSum.bind(this)
+      this.logSub = this.logSub.bind(this)
       
   }
 
@@ -51,11 +54,9 @@ class Calculator {
   logSub(){
     console.log(this.one - this.two);
   }
-  logDiv = () => {
+  logDiv () {
     if(this.val2 === 0) throw new Error("Ошибка!")
     console.log(this.one / this.two);
   }
 
 }
-
-
