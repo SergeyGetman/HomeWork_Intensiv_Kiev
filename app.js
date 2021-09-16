@@ -1,62 +1,69 @@
-
-
-
-function concatStrings(string,separator) {
-  let resultStr = string;
-
-  if (typeof(separator) !== "string") {
-    separator = "";
+class Node {
+  constructor(data, previous) {
+    this.data = data
+    this.previous = previous
+    if (typeof data != 'number') throw new Error('Inncorect values')
   }
-  function newFunc(str) {
-    if (typeof(str) !== "string") {
-      return resultStr;
+}
+
+class Stack {
+  constructor(maxSize = 10) {
+    this.maxSize = Number(maxSize)
+    this._top = null
+    this.size = 0
+  }
+
+  push(data) {
+    const node = new Node(data, this._top)
+    this._top = node
+    this.size += 1
+
+    return this._top
+  }
+
+  pop() {
+    if (!this.size) {
+      throw new Error('empty Stack')
     }
-    resultStr = resultStr + separator + str;
-    return newFunc;
+    let temp = this._top
+    this._top = this._top.previous
+    this.size -= 1
+    return temp
   }
 
-  return newFunc;
+  peek() {
+    if (!this.size) throw new Error(null)
+    return this._top.data
+  }
+
+  isEmpty() {
+    return !this._top
+  }
+
+  toArray() {
+    const array = []
+    let currentNode = this._top
+    array.push(currentNode.data)
+    while (currentNode.previous != null) {
+      currentNode = currentNode.previous
+      array.push(currentNode.data)
+    }
+    return array
+  }
+
+  static fromIterable(iterable) {
+    if (!iterable[Symbol.iterator]) {
+      throw new Error('Object is not iterable.')
+    }
+    const list = [...iterable]
+    const stack = new Stack(list.length)
+
+    for (let value of list) {
+      stack.push(value)
+    }
+
+    return stack
+  }
 }
 
-class Calculator {
-
-  constructor(one, two ){
-      
-    if(one === "") throw new Error("Ошибка")
-    if(typeof one !== "number" || typeof two !== "number" || arguments.length > 2) throw new Error("Ошибка")
-      this.one = one;
-      this.two = two;
-      this.logDiv = this.logDiv.bind(this)
-      this.logMul = this.logMul.bind(this)
-      this.logSum = this.logSum.bind(this)
-      this.logSub = this.logSub.bind(this)
-      
-  }
-
-     setX(val){
-      if(typeof val !== "number" || val === undefined || isNaN(val)) throw new Error("Ошибка")
-        this.one = val;
-        return val;
-    
-  }
-  setY(val2){
-    if(typeof val2 !== "number" || val2 === undefined || isNaN(val2)) throw new Error("Ошибка!")
-    this.two = val2;
-    return val2;
-  }
-
-  logSum(){
-    console.log(this.one + this.two);
-  }
-  logMul(){
-    console.log(this.one * this.two);
-  }
-  logSub(){
-    console.log(this.one - this.two);
-  }
-  logDiv () {
-    if(this.val2 === 0) throw new Error("Ошибка!")
-    console.log(this.one / this.two);
-  }
-
-}
+module.exports = { Stack }
