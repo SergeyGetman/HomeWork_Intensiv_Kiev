@@ -2,7 +2,10 @@ class Node {
   constructor(data, previous) {
     this.data = data
     this.previous = previous
-    if (typeof data != 'number') throw new Error('Inncorect values')
+    console.log(this.previos)
+    console.log(this.data)
+    if (data !== Number(data) || data === Infinity || data === -Infinity)
+      throw new Error("it's not a number")
   }
 }
 
@@ -43,12 +46,14 @@ class Stack {
   toArray() {
     const array = []
     let currentNode = this._top
-    array.push(currentNode.data)
-    while (currentNode.previous != null) {
+    let firstElem = currentNode.data
+    do {
       currentNode = currentNode.previous
-      array.push(currentNode.data)
-    }
-    return array
+      array.push(firstElem, currentNode.data)
+      if (currentNode.previous === null) break
+    } while (currentNode.previous.data)
+
+    return array.filter((elem, i, arr) => arr.indexOf(elem) == i)
   }
 
   static fromIterable(iterable) {
