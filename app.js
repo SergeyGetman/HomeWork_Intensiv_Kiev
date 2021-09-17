@@ -11,7 +11,7 @@ class Stack {
       throw new TypeError('Misstake')
     }
     this.maxSize = Number(maxSize)
-    this._top = null
+    this.top = null
     this.size = 0
   }
 
@@ -20,35 +20,35 @@ class Stack {
       throw new Error('Maxsize it*s full')
     }
 
-    const node = new Node(data, this._top)
-    this._top = node
+    const node = new Node(data, this.top)
+    this.top = node
     this.size += 1
 
-    return this._top
+    return this.top
   }
 
   pop() {
     if (!this.size) {
       throw new Error('empty Stack')
     }
-    let temp = this._top
-    this._top = this._top.previous
+    let temp = this.top
+    this.top = this.top.previous
     this.size -= 1
     return temp
   }
 
   peek() {
     if (!this.size) throw new Error(null)
-    return this._top.data
+    return this.top.data
   }
 
   isEmpty() {
-    return !this._top
+    return !this.top
   }
 
   toArray() {
     const array = []
-    let currentNode = this._top
+    let currentNode = this.top
     let firstElem = currentNode.data
     do {
       currentNode = currentNode.previous
