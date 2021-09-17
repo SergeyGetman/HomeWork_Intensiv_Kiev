@@ -50,11 +50,11 @@ class Stack {
     const array = []
     let currentNode = this.top
     let firstElem = currentNode.data
-    do {
+    while (currentNode.previous.data) {
       currentNode = currentNode.previous
       array.push(firstElem, currentNode.data)
       if (currentNode.previous === null) break
-    } while (currentNode.previous.data)
+    }
 
     return array.filter((elem, i, arr) => arr.indexOf(elem) == i)
   }
