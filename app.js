@@ -2,21 +2,24 @@ class Node {
   constructor(data, previous) {
     this.data = data
     this.previous = previous
-    console.log(this.previos)
-    console.log(this.data)
-    if (data !== Number(data) || data === Infinity || data === -Infinity)
-      throw new Error("it's not a number")
   }
 }
 
 class Stack {
   constructor(maxSize = 10) {
+    if (!Number.isInteger(maxSize)) {
+      throw new TypeError('Misstake')
+    }
     this.maxSize = Number(maxSize)
     this._top = null
     this.size = 0
   }
 
   push(data) {
+    if (!this.size === this.maxSize) {
+      throw new Error('Maxsize it*s full')
+    }
+
     const node = new Node(data, this._top)
     this._top = node
     this.size += 1
@@ -71,4 +74,4 @@ class Stack {
   }
 }
 
-module.exports = { Stack }
+module.exports = { Stack, Node }
