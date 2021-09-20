@@ -1,77 +1,59 @@
-class Node {
-  constructor(data, previous) {
-    this.data = data
-    this.previous = previous
-  }
-}
+//*********************************ПРИМЕР 1 *********************************//
 
-class Stack {
-  constructor(maxSize = 10) {
-    if (!Number.isInteger(maxSize)) {
-      throw new TypeError('Misstake')
-    }
-    this.maxSize = Number(maxSize)
-    this.top = null
-    this.size = 0
-  }
+let button = document.querySelector('.btn')
+button.addEventListener('click', function () {
+  Promise.resolve().then(() => console.log('Microtask 1'))
+  console.log('Listener 1')
+})
 
-  push(data) {
-    if (!this.size === this.maxSize) {
-      throw new Error('Maxsize it*s full')
-    }
+button.addEventListener('click', () => {
+  Promise.resolve().then(() => console.log('Microtask 2'))
+  console.log('Listener 2')
+})
 
-    const node = new Node(data, this.top)
-    this.top = node
-    this.size += 1
+//сработают синхронно две операции по очереди, а именно:
+//после того, как мы назначили элементу button, что в данном случаем
+//он будет у нас "слушателем события" "click", который в свою очередь будут ждать
+// до тех пор, пока его не вызовут, то есть пока он не вступит в "событийный цикл"
+//javaScript движок будет ожидать новые задачи.
+//Поскольку JS является однопоточным языком програмирования,и может выполнять задачи асинхроннно
+//то прежде чем что-либо будет выведено на экран, движок JavaScript распределит приоритетность между "микро и макро"
+//задачами в какой поочерёдности будет выполнения кода.
+//На конретном примере выше мы можем наблюдать две операции выполнятся одна за другой.
+//При нажатии на клавишу пользователем, создасться очередь задач (Callback queue),
+//и WEB API регистрирует данного "слушателя"
+//в первую очередь в (Call stack) "стек" попадает console.log первого "слушатея событий" и сразу-же уходит
+//за ним синхронно выполняется Promis и попадает в очередь задач. Когда промис создается, он запускается автоматически и он должен содержать
+//создающий код, который в будущем реализуется как резулятат.
+//Когда он получает результат, сейчас или позже – не важно, он должен вызвать один из этих колбэков: resolve или
+// reject. (В данном случае у нас resolve, то есть "разрешение"), которое в последующем мы используем методом then()
+//Аргумент метода .then – функция, которая выполняется, когда промис переходит в состояние «выполнен успешно», и получает результат
+//в конкретном примере мы задействуем этот результат выводом в консоль текстом('Microtask 1').
+//после обработки промиса он уходит со стека.
+//Далее реализуется выполнение кода ниже в такой-же самой хронологии как и первый.
 
-    return this.top
-  }
+//*********************************ПРИМЕР 2 *********************************//
 
-  pop() {
-    if (!this.size) {
-      throw new Error('empty Stack')
-    }
-    let temp = this.top
-    this.top = this.top.previous
-    this.size -= 1
-    return temp
-  }
+button.addEventListener('click', () => {
+  Promise.resolve().then(() => console.log('Microtask 1'))
+  console.log('Listener 1')
+})
 
-  peek() {
-    if (!this.size) throw new Error(null)
-    return this.top.data
-  }
+button.addEventListener('click', () => {
+  Promise.resolve().then(() => console.log('Microtask 2'))
+  console.log('Listener 2')
+})
 
-  isEmpty() {
-    return !this.top
-  }
+button.click()
 
-  toArray() {
-    const array = []
-    let currentNode = this.top
-    let firstElem = currentNode.data
-    while (currentNode.previous.data) {
-      currentNode = currentNode.previous
-      array.push(firstElem, currentNode.data)
-      if (currentNode.previous === null) break
-    }
-
-    return array.filter((elem, i, arr) => arr.indexOf(elem) == i)
-  }
-
-  static fromIterable(iterable) {
-    if (!iterable[Symbol.iterator]) {
-      throw new Error('Object is not iterable.')
-    }
-    const list = [...iterable]
-    const stack = new Stack(list.length)
-
-    for (let value of list) {
-      stack.push(value)
-    }
-
-    return stack
-  }
-}
-
-module.exports = { Stack, Node }
+//В примере 2 происходит следующие операции:
+//У нас есть кнопка button, и слушатель событий addEventListener c событием click,
+//но снизу мы видим, что событие click вызывается, и когда интерпритатор "заходит в код", он
+//вызов видит первым и выполняет его.
+//Поскольку операции попадают на вершину "стека" с этой "вершины" они и выполняются.
+//Дальше срабатывает приоритет "микро и макро" тасок отрабатывают сначала микротаски,
+//а поскольку мы вызвали обработчик события, в стек очереди попадут попадут сразу два
+//console.log, и два промиса. Поочерёдность  их выхода наружу из стека, сначала первый console.log,
+//потом второй, так-же будет и с промисами, они попадут в задачи макротасков. Попадут, так-же в стек, будут
+//находиться снизу cosole.log и так-же поочередно выйдут со стека.
+//Принцип попадания и как работает Event Loop описал выше, чтобы не делать DRY ))
