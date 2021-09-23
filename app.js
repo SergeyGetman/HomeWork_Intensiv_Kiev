@@ -1,59 +1,148 @@
-//*********************************ПРИМЕР 1 *********************************//
+class Car {
+  #brand
+  #model
+  #yearOfManufacturing
+  #maxSpeed
+  #maxFuelVolume
+  #fuelConsumption
+  #currentFuelVolume = 0
+  #isStarted = false
+  #mileage = 0
 
-let button = document.querySelector('.btn')
-button.addEventListener('click', function () {
-  Promise.resolve().then(() => console.log('Microtask 1'))
-  console.log('Listener 1')
-})
+  set brand(value) {
+    if (typeof(brand) !== "string" || value.length < 1 || value.length > 50) {
+      throw new Error("строка от 1 до 50 символов включительно.");
+  }
+  }
 
-button.addEventListener('click', () => {
-  Promise.resolve().then(() => console.log('Microtask 2'))
-  console.log('Listener 2')
-})
+  get brand(){
+    return this.#brand;
+  }
 
-//сработают синхронно две операции по очереди, а именно:
-//после того, как мы назначили элементу button, что в данном случаем
-//он будет у нас "слушателем события" "click", который в свою очередь будут ждать
-// до тех пор, пока его не вызовут, то есть пока он не вступит в "событийный цикл"
-//javaScript движок будет ожидать новые задачи.
-//Поскольку JS является однопоточным языком програмирования,и может выполнять задачи асинхроннно
-//то прежде чем что-либо будет выведено на экран, движок JavaScript распределит приоритетность между "микро и макро"
-//задачами в какой поочерёдности будет выполнения кода.
-//На конретном примере выше мы можем наблюдать две операции выполнятся одна за другой.
-//При нажатии на клавишу пользователем, создасться очередь задач (Callback queue),
-//и WEB API регистрирует данного "слушателя"
-//в первую очередь в (Call stack) "стек" попадает console.log первого "слушатея событий" и сразу-же уходит
-//за ним синхронно выполняется Promis и попадает в очередь задач. Когда промис создается, он запускается автоматически и он должен содержать
-//создающий код, который в будущем реализуется как резулятат.
-//Когда он получает результат, сейчас или позже – не важно, он должен вызвать один из этих колбэков: resolve или
-// reject. (В данном случае у нас resolve, то есть "разрешение"), которое в последующем мы используем методом then()
-//Аргумент метода .then – функция, которая выполняется, когда промис переходит в состояние «выполнен успешно», и получает результат
-//в конкретном примере мы задействуем этот результат выводом в консоль текстом('Microtask 1').
-//после обработки промиса он уходит со стека.
-//Далее реализуется выполнение кода ниже в такой-же самой хронологии как и первый.
+  set model(value){
+    if (typeof(brand) !== "string" || value.length < 1 || value.length > 50) 
+      throw new Error("строка от 1 до 50 символов включительно.");
+  }
 
-//*********************************ПРИМЕР 2 *********************************//
+  get model(){
+    return this.#model
+  }
 
-button.addEventListener('click', () => {
-  Promise.resolve().then(() => console.log('Microtask 1'))
-  console.log('Listener 1')
-})
+  set yearOfManufacturing (year){
+    if (!Number.isFinite(year) || year < 1900 || year > (new Date).getFullYear()) {
+      throw new Error("Неподходящий год.");
+  }
+  this.#yearOfManufacturing = year;
+  }
 
-button.addEventListener('click', () => {
-  Promise.resolve().then(() => console.log('Microtask 2'))
-  console.log('Listener 2')
-})
+  get yearOfManufacturing (){
+    if(!this.#yearOfManufacturing) throw new Error("год не задан")
+    return this.#yearOfManufacturing;
+  }
 
-button.click()
+  set maxSpeed (param){
+    if (!Number.isFinite(param) || param < 100 || param > 300) {
+      throw new Error("Speed shoud be a number in the range from 100 to 300.");
+  }
+  this.#maxSpeed = param;
 
-//В примере 2 происходит следующие операции:
-//У нас есть кнопка button, и слушатель событий addEventListener c событием click,
-//но снизу мы видим, что событие click вызывается, и когда интерпритатор "заходит в код", он
-//вызов видит первым и выполняет его.
-//Поскольку операции попадают на вершину "стека" с этой "вершины" они и выполняются.
-//Дальше срабатывает приоритет "микро и макро" тасок отрабатывают сначала микротаски,
-//а поскольку мы вызвали обработчик события, в стек очереди попадут попадут сразу два
-//console.log, и два промиса. Поочерёдность  их выхода наружу из стека, сначала первый console.log,
-//потом второй, так-же будет и с промисами, они попадут в задачи макротасков. Попадут, так-же в стек, будут
-//находиться снизу cosole.log и так-же поочередно выйдут со стека.
-//Принцип попадания и как работает Event Loop описал выше, чтобы не делать DRY ))
+  }
+  get maxSpeed(){
+    if(!this.#maxSpeed) throw new Error("Скорость не задана ")
+    return this.#maxSpeed
+  }
+
+  set maxFuelVolume (volume){
+    if(!Number.isFinite(volume) || volume <= 0){
+      throw new Error("параметр должен быть позитивное число")
+    }
+    this.#maxFuelVolume = volume;
+  }
+
+  get maxFuelVolume (){
+    if(!this.#maxFuelVolume) throw new Error("параметры не заданы")
+    return this.#currentFuelVolume;
+  }
+
+  set fuelConsumption (fuel){
+    if(!Number.isFinite(fuel) || fuel <= 0){
+      throw new Error("Должно быть число")
+    }
+    this.#fuelConsumption = fuel;
+  }
+
+  get fuelConsumption (){
+    if(!this.#fuelConsumption) throw new Error("Некорректный ввод")
+    return this.#fuelConsumption
+  }
+
+    
+  get currentFuelVolume() {
+      return this.#currentFuelVolume;
+  }
+
+  get isStarted() {
+      return this.#isStarted;
+  }
+
+  get mileage() {
+      return this.#mileage;
+  }
+
+  start = () => {
+    if (this.#isStarted) throw new Error('Машина уже заведена')
+    this.#isStarted = true
+  }
+  shutDownEngine = () => {
+    if (!this.#isStarted) throw new Error('Машина еще не заведена')
+    this.#isStarted = false
+  }
+  fillUpGasTank = (litres) => {
+    if (typeof litres !== 'number')
+      throw new Error('Неверное количество топлива для заправки')
+
+    if (litres <= 0) throw new Error('Неверное количество топлива для заправки')
+
+    if (this.#currentFuelVolume + litres > 20)
+      throw new Error('Топливный бак переполнен')
+
+    this.#currentFuelVolume += litres
+    console.log(this.#currentFuelVolume)
+  }
+
+  drive(speed, timers) {
+    if (typeof speed !== 'number' || speed <= 0) {
+      throw new Error('Неверная скорость')
+    }
+    if (typeof timers !== 'number' || timers <= 0) {
+      throw new Error('Неверное количество часов')
+    }
+    if (speed > this.#maxSpeed) {
+      throw new Error('Машина не может ехать так быстро')
+    }
+    if (this.#isStarted === false) {
+      throw new Error('Машина должна быть заведена, чтобы ехать')
+    }
+
+    let currentMile = speed * timers
+
+    let currentFullDistance = (this.#fuelConsumption / 100) * currentMile
+    let allFuel = this.#currentFuelVolume - currentFullDistance
+
+    if (this.#currentFuelVolume < 0) {
+      throw new Error('Недостаточно топлива')
+    }
+
+    this.#mileage += currentMile
+    this.#currentFuelVolume = allFuel
+  }
+}
+
+export class { Car }
+
+
+
+
+
+
+

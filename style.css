@@ -1,25 +1,44 @@
 body {
-  background-color: rgb(148, 174, 233);
+  background: rgb(98, 94, 94);
+
   text-align: center;
   margin-top: 50%;
   font-size: 50px;
 }
 h1 {
-  color: linear-gra;
-  line-height: 20px;
+  margin-top: -35%;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 200px;
+  font-family: fantasy;
+  text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.9);
 }
+
+/* h1 {
+  margin-top: -35%;
+  overflow: hidden;
+  text-shadow: 0 0 rgb(236, 21, 13), 0 0 rgb(11, 41, 147), 0 0 rgb(16, 16, 169);
+  color: transparent;
+  transition: all 1s;
+}
+h1:hover {
+  text-shadow: -400px 0 rgb(12, 11, 11), 400px 0 rgb(10, 10, 10),
+    0 0 rgb(35, 10, 179);
+} */
 .btn {
-  background-color: rgb(236, 17, 17);
-  color: aliceblue;
+  background-color: rgb(128, 125, 125);
+  color: rgb(22, 21, 21);
+  border: 2px solid rgb(251, 247, 247);
   height: 100px;
-  width: 170px;
+  width: 470px;
+  font-size: 45px;
   border-radius: 10%;
   cursor: pointer;
-  box-shadow: 10px 5px 5px rgb(209, 61, 61);
-  position: inherit;
+  box-shadow: 10px 5px 5px rgb(99, 93, 93);
+  margin-top: -150px;
   opacity: 90%;
+  letter-spacing: 15px;
+  text-shadow: 2px 2px 3px rgba(255, 252, 252, 0.1);
 
-  font-size: 20px;
   font-weight: bold;
   text-transform: uppercase;
   font-family: cursive;
