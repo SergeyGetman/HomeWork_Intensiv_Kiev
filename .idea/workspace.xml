@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5faaedf7-d8f1-450c-9967-0dd29296a20e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/.bin/prettier" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/.bin/prettier.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/.yarn-integrity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/prettier/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/prettier/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/prettier/bin-prettier.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/prettier/doc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/prettier/esm/parser-angular.mjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/prettier/esm/parser-babel.mjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/prettier/esm/parser-espree.mjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/prettier/esm/parser-flow.mjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/prettier/esm/parser-glimmer.mjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/prettier/esm/parser-graphql.mjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/prettier/esm/parser-html.mjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/prettier/esm/parser-markdown.mjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/prettier/esm/parser-meriyah.mjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/prettier/esm/parser-postcss.mjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/prettier/esm/parser-typescript.mjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/prettier/esm/parser-yaml.mjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/prettier/esm/standalone.mjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/prettier/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/prettier/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/prettier/parser-angular.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/prettier/parser-babel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/prettier/parser-espree.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/prettier/parser-flow.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/prettier/parser-glimmer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/prettier/parser-graphql.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/prettier/parser-html.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/prettier/parser-markdown.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/prettier/parser-meriyah.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/prettier/parser-postcss.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/prettier/parser-typescript.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/prettier/parser-yaml.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/prettier/standalone.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/prettier/third-party.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/todolist/.eslintrc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/todolist/prettier.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/todolist/src/components/Todos.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/todolist/src/redux/reducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/todolist/src/redux/store.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/launch.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/todolist/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/todolist/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/todolist/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todolist/public/logo192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/todolist/public/logo512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/todolist/public/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/todolist/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/todolist/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/todolist/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todolist/src/App.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/todolist/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/todolist/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/todolist/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todolist/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/todolist/src/reportWebVitals.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/todolist/src/setupTests.js" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="20DdvlZHTMQdNIJF5cajkBJDhCF" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Kharkov_HW" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\user\Desktop\VS_Code_ALL\HomeWorkIntensiv\node_modules\prettier" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\user\Desktop\VS_Code_ALL\HomeWorkIntensiv\todolist" />
+      <recent name="C:\Users\user\Desktop\VS_Code_ALL\HomeWorkIntensiv\todolist\src" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5faaedf7-d8f1-450c-9967-0dd29296a20e" name="Default Changelist" comment="" />
+      <created>1635583324671</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1635583324671</updated>
+      <workItem from="1635583325918" duration="15085000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
