@@ -2,56 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6fafbc9-dc55-4160-860a-499628dd4f37" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/todolist/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todolist/src/components/DisplayTodos.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todolist/src/components/TodoItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/prettier.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/todolist/src/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/prettier" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/prettier.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.yarn-integrity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/prettier/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/prettier/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/prettier/bin-prettier.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/prettier/doc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/prettier/esm/parser-angular.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/prettier/esm/parser-babel.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/prettier/esm/parser-espree.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/prettier/esm/parser-flow.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/prettier/esm/parser-glimmer.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/prettier/esm/parser-graphql.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/prettier/esm/parser-html.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/prettier/esm/parser-markdown.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/prettier/esm/parser-meriyah.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/prettier/esm/parser-postcss.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/prettier/esm/parser-typescript.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/prettier/esm/parser-yaml.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/prettier/esm/standalone.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/prettier/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/prettier/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/prettier/parser-angular.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/prettier/parser-babel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/prettier/parser-espree.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/prettier/parser-flow.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/prettier/parser-glimmer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/prettier/parser-graphql.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/prettier/parser-html.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/prettier/parser-markdown.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/prettier/parser-meriyah.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/prettier/parser-postcss.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/prettier/parser-typescript.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/prettier/parser-yaml.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/prettier/standalone.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/prettier/third-party.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/todolist/.eslintrc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/todolist/package-lock.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/todolist/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/todolist/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todolist/src/components/Todos.js" beforeDir="false" afterPath="$PROJECT_DIR$/todolist/src/components/Todos.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todolist/src/redux/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/todolist/src/redux/reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todolist/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/todolist/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/todolist/src/components/DisplayTodos.js" beforeDir="false" afterPath="$PROJECT_DIR$/todolist/src/components/DisplayTodos.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todolist/src/components/TodoItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/todolist/src/components/TodoItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todolist/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/todolist/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +40,7 @@
       <option name="presentableId" value="Default" />
       <updated>1635620397492</updated>
       <workItem from="1635620400189" duration="6786000" />
-      <workItem from="1635668556585" duration="1120000" />
+      <workItem from="1635668556585" duration="9864000" />
     </task>
     <servers />
   </component>

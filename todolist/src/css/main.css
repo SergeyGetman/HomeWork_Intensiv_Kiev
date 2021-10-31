@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap');
+
+html {
+    line-height: 1.15;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'RocknRoll One', sans-serif;
+}
+
+body {
+    background: linear-gradient(
+            190deg, #d246e2 0%,
+            #6049c6 100% );
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #000000;
+    overflow : hidden;
+}
+
+.App {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.App h1{
+    display: inline;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #e0dede;
+    text-shadow: 0 0 9px #050505, 3px -2px;
+}
+.addTodos {
+    display: flex;
+    justify-content: center;
+}
+.todo-input {
+    min-width: 15rem;
+    width: 40vw;
+    max-height: 2.5rem;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+
+    align-self: center;
+}
+.todo-input:focus{
+    outline: none;
+    border: 2px solid #e0dede;
+}
+
+.add-btn{
+    margin-left: 1rem;
+    background-color: #050505;
+    color: #ffffff;
+    border-radius: 50%;
+    border: 2px solid #fcf9fa;
+    font-size: 1.5rem;
+}
