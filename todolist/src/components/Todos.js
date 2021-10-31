@@ -1,6 +1,11 @@
-import React, { useRef, useState } from 'react';
+import React, {useState } from 'react';
 import { connect } from 'react-redux';
-import { addTodos, removeTodos } from '../redux/reducer';
+import {
+  addTodos,
+  completeTodos,
+  removeTodos,
+  updateTodos,
+} from '../redux/reducer';
 
 const mapStateToProps = (state) => {
   return {
@@ -12,18 +17,20 @@ const mapDispatchToProps = (dispatch) => {
   return {
     addTodo: (obj) => dispatch(addTodos(obj)),
     removeTodo: (id) => dispatch(removeTodos(id)),
+    updateTodo: (obj) => dispatch(updateTodos(obj)),
+    completeTodo: (id) => dispatch(completeTodos(id)),
   };
 };
 
 const Todos = (props) => {
   const [todo, setTodo] = useState('');
 
-  const inputRef = useRef(true);
+  //function with thei helper in textarea in stated disabled
 
   const handleChange = (e) => {
     setTodo(e.target.value);
   };
-  console.log('this props from store ', props);
+
   return (
     <div className="addTodos">
       <input
@@ -44,23 +51,6 @@ const Todos = (props) => {
         Add
       </button>
       <br />
-      <ul>
-        {props.todos.map((elem) => {
-          return (
-            <li key={elem.id}>
-              <textarea
-                ref={inputRef}
-                disabled={inputRef}
-                defaultValue={elem.item}
-              />
-              <button>Edit</button>
-              <button onClick={() => props.removeTodo(elem.id)}>
-                Delete
-              </button>{' '}
-            </li>
-          );
-        })}
-      </ul>
     </div>
   );
 };
