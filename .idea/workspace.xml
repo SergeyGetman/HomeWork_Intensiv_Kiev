@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6fafbc9-dc55-4160-860a-499628dd4f37" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/todolist/src/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todolist/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/todolist/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todolist/src/components/DisplayTodos.js" beforeDir="false" afterPath="$PROJECT_DIR$/todolist/src/components/DisplayTodos.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/todolist/src/components/TodoItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/todolist/src/components/TodoItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todolist/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/todolist/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todolist/src/components/Todos.js" beforeDir="false" afterPath="$PROJECT_DIR$/todolist/src/components/Todos.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todolist/src/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/todolist/src/css/main.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +38,7 @@
       <option name="presentableId" value="Default" />
       <updated>1635620397492</updated>
       <workItem from="1635620400189" duration="6786000" />
-      <workItem from="1635668556585" duration="9864000" />
+      <workItem from="1635668556585" duration="19478000" />
     </task>
     <servers />
   </component>
